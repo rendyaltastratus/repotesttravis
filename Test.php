@@ -11,8 +11,8 @@ try{
 }
 catch(Exception $e ){
   ini_set('display_errors',1);
-  trigger_error("Travis need More", E_USER_ERROR);
-  var_dump("test");
+//  trigger_error("Travis need More", E_USER_ERROR);
+//  var_dump("test");
   echo 'Caught exception: ',  $e->getMessage(), "\n";
 
 }
