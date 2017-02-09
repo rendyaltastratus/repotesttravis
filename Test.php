@@ -27,10 +27,11 @@ try{
 }
 catch(Exception $e ){
   ini_set('display_errors',1);
-  trigger_error("Travis need More", E_USER_ERROR);
-  //var_dump("test");
-  echo 'Caught exception: ',  $e->getMessage(), "\n";
 
+  //var_dump("test");
+  // echo 'Caught exception: ',  $e->getMessage(), "\n";
+  $myfile = fopen("testfile.txt", "w+");
+    trigger_error("Travis need More", E_USER_ERROR);
 }
 
 ?>
