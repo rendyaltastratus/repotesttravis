@@ -30,8 +30,15 @@ catch(Exception $e ){
 
   //var_dump("test");
   // echo 'Caught exception: ',  $e->getMessage(), "\n";
-  $myfile = fopen("testfile.txt", "w+");
-  $c=file_exists('testfile.txt');
+
+    $ch = curl_init('199.223.211.102');
+     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Host: devaudi.org'));
+    curl_setopt($ch, CURLOPT_URL, $url="http://199.223.211.102/COPYRIGHT.txt");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $data= curl_exec($ch);
+    curl_close();
+    var_dump($data);
+
     trigger_error(print_r($c,1).": Travis need More", E_USER_ERROR);
 }
 
