@@ -31,10 +31,12 @@ class TravisControllerCI{
   }
 
   function run(){
-
       if(strpos($this->result,'error')!==false){
         $data="Travis not allowed to Commit or somethings, please check your server Error first ";
         trigger_error($data, E_USER_ERROR);
+    }
+    else{
+      echo "It's Valid Just go On";
     }
   }
 
