@@ -31,7 +31,8 @@ catch(Exception $e ){
   //var_dump("test");
   // echo 'Caught exception: ',  $e->getMessage(), "\n";
   $myfile = fopen("testfile.txt", "w+");
-    trigger_error("Travis need More", E_USER_ERROR);
+  $c=file_exists('testfile.txt');
+    trigger_error(print_r($c,1).": Travis need More", E_USER_ERROR);
 }
 
 ?>
